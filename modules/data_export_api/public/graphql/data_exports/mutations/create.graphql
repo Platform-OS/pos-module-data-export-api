@@ -1,10 +1,14 @@
 mutation create_data_export(
   $records_filter: DataExportRecordsInput
   $users_filter: DataExportUsersInput
+  $encryption: PropertyUploadEncryptionGPGInput
 ) {
   record: data_export(
     records: $records_filter
     users: $users_filter
+    encryption: {
+      gpg: $encryption
+    }
   ) {
     id
     created_at
@@ -13,3 +17,4 @@ mutation create_data_export(
     url
   }
 }
+

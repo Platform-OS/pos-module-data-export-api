@@ -1,5 +1,5 @@
 {% liquid
   assign key = 30 | random_string
-  function _res = 'modules/core/lib/commands/variable/set', name: '_data_export_api_key', value: key
+  function _res = 'modules/core/commands/variable/set', name: '_data_export_api_key', value: key
   log key, type: "DATA EXPORT API KEY"
 %}

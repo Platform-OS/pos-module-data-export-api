@@ -6,6 +6,9 @@
   if object.users_filter
     hash_assign result['users_filter'] = null | hash_merge: filter: object.users_filter
   endif
+  if object.encryption
+    hash_assign result['encryption'] = object.encryption
+  endif
 
   return result
 %}
