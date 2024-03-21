@@ -1,0 +1,12 @@
+{%- liquid
+  function api_key = 'modules/core/queries/variable/find', name: '_data_export_api_key', type: 'string'
+-%}
+{% if api_key != context.headers.HTTP_API_KEY %}
+  {%- response_status 401 -%}
+  {
+    "errors": {
+      "401": "API_KEY header invalid"
+    }
+  }
+  {% break %}
+{% endif %}

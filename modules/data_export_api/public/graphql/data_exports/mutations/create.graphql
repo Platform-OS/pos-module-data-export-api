@@ -1,0 +1,15 @@
+mutation create_data_export(
+  $records_filter: DataExportRecordsInput
+  $users_filter: DataExportUsersInput
+) {
+  record: data_export(
+    records: $records_filter
+    users: $users_filter
+  ) {
+    id
+    created_at
+    updated_at
+    status
+    url
+  }
+}
