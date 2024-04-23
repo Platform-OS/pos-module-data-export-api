@@ -9,7 +9,7 @@ jobs:
   call-test-workflow:
     uses: ./.github/workflows/test.yml
     with:
-      module_root: ./modules/data-export-api/
+      module_root: ./modules/data_export_api
     secrets: inherit
   #call-release-workflow:
   #  uses: Platform-OS/pos-module-core/.github/workflows/release.yml@workflow-and-tests
