@@ -7,7 +7,7 @@ on:
 
 jobs:
   call-test-workflow:
-    uses: Platform-OS/pos-module-core/.github/workflows/test.yml@workflow-and-tests
+    uses: ./.github/workflows/test.yml@workflow-and-tests
     with:
       module_root: ./modules/data-export-api/
     secrets: inherit
