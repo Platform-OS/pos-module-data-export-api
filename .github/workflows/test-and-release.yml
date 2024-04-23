@@ -7,12 +7,12 @@ on:
 
 jobs:
   call-test-workflow:
-    uses: Platformos/pos-module-core/.github/workflows/test.yml@main
+    uses: Platform-OS/pos-module-core/.github/workflows/test.yml@main
     with:
       module_root: ./modules/data-export-api/
     secrets: inherit
   #call-release-workflow:
-  #  uses: Platformos/pos-module-core/.github/workflows/release.yml@main
+  #  uses: Platform-OS/pos-module-core/.github/workflows/release.yml@main
   #  needs: call-test-workflow
   #  secrets: inherit
 
