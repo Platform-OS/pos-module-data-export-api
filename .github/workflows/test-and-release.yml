@@ -7,7 +7,7 @@ on:
 
 jobs:
   call-test-workflow:
-    uses: ./.github/workflows/test.yml
+    uses: Platform-OS/pos-module-core/.github/workflows/test.yml@workflow-and-tests
     secrets: inherit
   #call-release-workflow:
   #  uses: Platform-OS/pos-module-core/.github/workflows/release.yml@workflow-and-tests
