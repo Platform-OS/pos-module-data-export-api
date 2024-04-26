@@ -5,7 +5,7 @@ export default defineConfig({
     baseURL: `${process.env.MPKIT_URL}`,
     extraHTTPHeaders: {
       'Content-Type': 'application/json',
-      'API_KEY': '0123456789'
+      'API_KEY': `${process.env.POS_TEST_API_KEY}`
     }
   }
 });
