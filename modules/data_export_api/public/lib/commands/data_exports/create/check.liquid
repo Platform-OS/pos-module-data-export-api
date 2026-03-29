@@ -1,6 +1,10 @@
 {% liquid
   assign c = '{ "errors": {}, "valid": true }' | parse_json
 
+  if object.encryption
+    function c = 'modules/core/validations/gpg', c: c, object: object, field_name: 'encryption'
+  endif
+
   assign object = object | hash_merge: valid: c.valid, errors: c.errors
 
   return object
